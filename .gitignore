@@ -1,3 +1,16 @@
+__pycache__
+*/__pycache__
+*.pc
+*.pyc
+*.pyo
+
+# static files (use 'manage.py collectstatic' to populate)
+./proj/static/
+
+# user-specific sensitive info
+.auth/
+
+
 ##########################################################
 # Based on gitignore/Global/Vagrant.gitignore
 # General

@@ -17,10 +17,26 @@ Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/xenial64"
   config.vm.provision :shell, path: File.join(cwd,
                                               "setup_provision",
-                                              "setup_pip_venv_venvwrapper.sh")
+                                              "raise_firewall.sh")
+  config.vm.provision :shell, path: File.join(cwd,
+                                              "setup_provision",
+                                              "install_host_machine_dependencies.sh")
   config.vm.provision :shell, path: File.join(cwd,
                                               "setup_provision",
                                               "create_venv_apply_requirements.sh")
+  config.vm.provision :shell, inline: "python3 " + File.join("/vagrant",
+                                                             "setup_provision",
+                                                             "db_init",
+                                                             "main.py")
+  config.vm.provision :shell, path: File.join(cwd,
+                                              "setup_provision",
+                                              "do_collectstatic.sh")
+  # config.vm.provision :shell, path: File.join(cwd,
+  #                                            "setup_provision",
+  #                                            "enable_gunicorn_service.sh")
+  config.vm.provision :shell, path: File.join(cwd,
+                                              "setup_provision",
+                                              "enable_nginx_gunicorn.sh")
 end
 
   # Disable automatic box update checking. If you disable this, then

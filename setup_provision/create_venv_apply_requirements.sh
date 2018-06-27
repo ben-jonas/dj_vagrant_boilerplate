@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 PATH_EXPORT_VENVWRAPPER_SH="/vagrant/setup_sessionconfig/export_venvwrapper_vars.sh"
 PATH_EXPORT_PROJECT_NAME="/vagrant/setup_sessionconfig/export_project_name.sh"
 source $PATH_EXPORT_VENVWRAPPER_SH
