@@ -1,6 +1,7 @@
 [Unit]
 Description=gunicorn daemon
 After=network.target
+RequiresMountsFor=/vagrant/proj
 
 [Service]
 User=vagrant

@@ -5,10 +5,10 @@ __pycache__
 *.pyo
 
 # static files (use 'manage.py collectstatic' to populate)
-./proj/static
+/proj/static
 
 # user-specific sensitive info
-.auth
+auth
 
 
 ##########################################################

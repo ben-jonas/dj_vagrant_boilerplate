@@ -32,11 +32,10 @@ Vagrant.configure("2") do |config|
                                               "setup_provision",
                                               "django_commands.sh")
   config.vm.provision :shell, path: File.join(cwd,
-                                             "setup_provision",
-                                             "enable_gunicorn_service.sh")
-  config.vm.provision :shell, path: File.join(cwd,
                                               "setup_provision",
-                                              "enable_nginx_gunicorn.sh")
+                                              "gunicorn_and_nginx_site_setup.sh")
+
+  config.vm.provision :shell, run: "always", inline: "systemctl restart gunicorn"
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
