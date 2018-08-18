@@ -10,6 +10,8 @@ __pycache__
 # user-specific sensitive info
 auth
 
+#ALLOWED_HOSTS depends on whether this is local dev or production; it's configured via the Vagrantfile
+/proj/myproject/settings/allowed_hosts.py
 
 ##########################################################
 # Based on gitignore/Global/Vagrant.gitignore
