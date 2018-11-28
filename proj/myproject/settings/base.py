@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 import json, os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 VAGRANT_BASE_DIR = os.path.dirname((BASE_DIR))
 
@@ -26,8 +26,6 @@ SECRET_KEY = 'i-!4w#7@+b$#913+-!6%d7_&_gf9=$-9c6ec57t3ip4*931#=u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '192.168.33.10']
 
 
 # Application definition

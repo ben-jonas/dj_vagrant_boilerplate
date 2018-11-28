@@ -1,0 +1,11 @@
+{
+  "ENABLE_DIGITALOCEAN" : false,
+
+  "override.vm.box" : "digital_ocean",
+  "override.vm.box_url" : "https://github.com/devopsgroup-io/vagrant-digitalocean/raw/master/box/digital_ocean.box",
+  "override.ssh.private_key_path" : "",
+
+  "provider.token" : "",
+  "provider.image" : "ubuntu-16-04-x64",
+  "provider.region" : "nyc1"
+}
